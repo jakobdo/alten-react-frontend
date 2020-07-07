@@ -66,7 +66,7 @@ function ConsultantList(){
                                     alt={consultant.fullname} 
                                 />
                             </Link>
-                            <strong><h5>{consultant.fullname}</h5></strong>
+                            <strong><h5 className="small-heading">{consultant.fullname}</h5></strong>
                             <p>{consultant.jobtitle}</p>
                         </Card>
                     </Col>
