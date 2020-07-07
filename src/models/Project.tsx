@@ -1,12 +1,14 @@
 import { IConsultantSimple } from "./Consultant";
 import { ITechnologySimple } from "./Technology";
+import { IIndustrySimple } from "./Industri";
+import { IClientSimple } from "./Client";
 
 export interface IProject {
     name: string;
     slug: string;
     description: string;
-    client: number | null;
-    industry: string | null;
+    client: IClientSimple | null;
+    industry: IIndustrySimple | null;
     technologies: ITechnologySimple[];
     consultants: IConsultantSimple[];
 }

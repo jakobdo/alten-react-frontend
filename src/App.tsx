@@ -59,7 +59,7 @@ function App() {
                 <main>
                     <Switch>
                         <Route exact={true} path="/">
-                            <Home/>
+                            <Home />
                         </Route>
                         <Route exact={true} path="/consultants">
                             <ConsultantList />

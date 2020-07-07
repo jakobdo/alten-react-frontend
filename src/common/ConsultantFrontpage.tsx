@@ -11,6 +11,8 @@ interface ConsultantFrontpageProps {
 }
 
 function ConsultantFrontpage({consultant}:ConsultantFrontpageProps){
+    const levels = consultant.technologyLevels.slice(0, 5);
+
     return (
         <Row>
             <Col s={12} m={4}>
@@ -28,7 +30,9 @@ function ConsultantFrontpage({consultant}:ConsultantFrontpageProps){
                 </h3>
                 <h6>{consultant.jobtitle}</h6>
                 <p>{consultant.teaser}</p>
-                <TechnologyLevels technologyLevels={consultant.technologyLevels} />
+                {levels.length > 0 && (
+                    <TechnologyLevels technologyLevels={levels} />
+                )}
             </Col>
             <Col s={12} className="center-align">
                 <Link className="waves-effect waves-light btn" to={`/consultants/${consultant.slug}`}>LEARN MORE</Link>

@@ -32,12 +32,8 @@ function ProjectList(){
                                     {project.name}
                                 </Link>
                             </h6>
-                            {(project.industry || project.client) && (
-                                <strong>{project.client ? (
-                                    project.client
-                                ) : (
-                                    project.industry
-                                )}</strong>
+                            {project.industry && (
+                                <strong>{project.industry.name}</strong>
                             )}
                        
                             <div className="left-align">{project.description}</div>
