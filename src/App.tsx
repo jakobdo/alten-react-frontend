@@ -62,7 +62,6 @@ function App() {
                             trigger={<a href="#!"><Icon>phone</Icon></a>}
                         >
                             <a href="tel:004541423030">+45 4142 3030</a>
-                            <Divider />
                             <a href="tel:004541423030">Click to call!</a>
                         </Dropdown>
                         <NavItem href="mailto:tech@alten.dk">
