@@ -12,7 +12,9 @@ import {
     Icon,
     Navbar,
     NavItem,
-    Row
+    Row,
+    Dropdown,
+    Divider
 } from 'react-materialize';
 import Home from './home/Home';
 import ProjectList from './project/ProjectList';
@@ -48,9 +50,21 @@ function App() {
                         <NavLink to="/projects">PROJECTS</NavLink>
                         <NavLink to="/technologies">TECHNOLOGIES & TOOLS</NavLink>
                         <NavLink to="/about">ABOUT US</NavLink>
-                        <NavItem href="tel:004541423030">
-                            <Icon>phone</Icon>
-                        </NavItem>
+                        <Dropdown
+                            id="Dropdown_6"
+                            options={{
+                            constrainWidth: false,
+                            coverTrigger: false,
+                            hover: true,
+                            inDuration: 150,
+                            outDuration: 250
+                            }}
+                            trigger={<a href="#!"><Icon>phone</Icon></a>}
+                        >
+                            <a href="tel:004541423030">+45 4142 3030</a>
+                            <Divider />
+                            <a href="tel:004541423030">Click to call!</a>
+                        </Dropdown>
                         <NavItem href="mailto:tech@alten.dk">
                             <Icon>email</Icon>
                         </NavItem>
