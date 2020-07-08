@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { IProject } from '../models/Project';
 import API from '../utils/API';
-import { Row, Col, Card, Chip } from 'react-materialize';
+import { Card, Chip } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import { IConsultantSimple } from '../models/Consultant';
 import { ITechnologySimple } from '../models/Technology';

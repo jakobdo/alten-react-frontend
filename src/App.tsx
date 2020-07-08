@@ -13,8 +13,7 @@ import {
     Navbar,
     NavItem,
     Row,
-    Dropdown,
-    Divider
+    Dropdown
 } from 'react-materialize';
 import Home from './home/Home';
 import ProjectList from './project/ProjectList';
