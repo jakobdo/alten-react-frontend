@@ -45,9 +45,9 @@ function ConsultantList(){
                 )}
             </div>
             <hr />
-            <Row>
+            <ul className="list">
                 {consultants.map((consultant: IConsultant) => 
-                    <Col key={consultant.slug} s={12} m={6} l={4}>
+                    <li className="list-item" key={consultant.slug}>
                         <Card
                             actions={[
                                 <Link key={consultant.slug}
@@ -69,9 +69,9 @@ function ConsultantList(){
                             <strong><h5 className="small-heading">{consultant.fullname}</h5></strong>
                             <p>{consultant.jobtitle}</p>
                         </Card>
-                    </Col>
+                    </li>
                 )}
-            </Row>
+            </ul>
         </div>
     )
 }
