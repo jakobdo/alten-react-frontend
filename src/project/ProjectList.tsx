@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { IConsultantSimple } from '../models/Consultant';
 import { ITechnologySimple } from '../models/Technology';
 
+
 function ProjectList(){
     const [projects, setProjects] = useState<IProject[]>([]);
 
@@ -21,12 +22,10 @@ function ProjectList(){
     return (
         <div className="container">
             <h1>Projects</h1>
-            <Row>
+            <ul className="list">
                 {projects.map((project: IProject) => 
-                    <Col s={12} m={6} l={4} key={project.slug}>
-                        <Card
-                            textClassName="center-align"
-                        >
+                    <li className="list-item" key={project.slug}>
+                        <Card>
                             <h6>
                                 <Link to={`/projects/${project.slug}`}>
                                     {project.name}
@@ -36,7 +35,7 @@ function ProjectList(){
                                 <strong>{project.industry.name}</strong>
                             )}
                        
-                            <div className="left-align">{project.description}</div>
+                            <div>{project.description}</div>
                             {project.consultants.length > 0 && (
                                 <div className="left-align">
                                     <br />
@@ -66,9 +65,9 @@ function ProjectList(){
                                 </div>
                             )}
                         </Card>
-                    </Col>
+                    </li>
                 )}
-            </Row>
+            </ul>
         </div>
     )
 }
