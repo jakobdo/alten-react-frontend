@@ -124,8 +124,8 @@ function App() {
                                 <h5>Pages</h5>
                                 <Link to="/consultants">CONSULTANTS</Link><br />
                                 <Link to="/projects">PROJECTS</Link><br />
-                                <Link to="/technologies">TECHNOLOGIES & TOOLS</Link><br />
-                                <Link to="/about">ABOUT US</Link>
+                                <Link to="/technologies">TECH & TOOLS</Link><br />
+                                <Link to="/about">ABOUT</Link>
                             </Col>
                         </Row>
                     </div>
