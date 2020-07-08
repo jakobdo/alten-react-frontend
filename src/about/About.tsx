@@ -11,7 +11,7 @@ function About() {
                 <a href="https://www.alten.com/" target="_blank" rel="noopener noreferrer">
                     <img
                         alt="Alten Sweden"
-                        src="https://altentechnology.dk/static/base/gfx/alten.sweden.jpg"
+                        src="https://api.altentechnology.dk/static/base/gfx/alten.sweden.jpg"
                         width="100%"
                     />
                 </a>
@@ -58,7 +58,7 @@ function About() {
                         <Col s={12} m={4}>
                             <img
                                 className="circle responsive-img"
-                                src="https://altentechnology.dk/static/base/gfx/katrine.png"
+                                src="https://api.altentechnology.dk/static/base/gfx/katrine.png"
                                 alt="Katrine Villumsen"
                             />
                         </Col>
@@ -92,7 +92,7 @@ function About() {
                         <Col s={12} m={4}>
                             <img
                                 className="circle responsive-img"
-                                src="https://altentechnology.dk/static/base/gfx/nikolaj.png"
+                                src="https://api.altentechnology.dk/static/base/gfx/nikolaj.png"
                                 alt="Nikolaj Enevoldsen"
                             />
                         </Col>
@@ -134,7 +134,7 @@ function About() {
                         <Col s={12} m={4}>
                             <img
                                 className="circle responsive-img"
-                                src="https://altentechnology.dk/static/base/gfx/katja.jpg"
+                                src="https://api.altentechnology.dk/static/base/gfx/katja.jpg"
                                 alt="Katja Linnea Serritzle"
                             />
                         </Col>

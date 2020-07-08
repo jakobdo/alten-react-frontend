@@ -21,7 +21,7 @@ function Home() {
     return (
         <div>
             <Parallax
-                image={<img alt="" src="https://altentechnology.dk/static/base/gfx/parallax1_5.jpg"/>}
+                image={<img alt="" src="https://api.altentechnology.dk/static/base/gfx/parallax1_5.jpg"/>}
                 options={{
                     responsiveThreshold: 0
                 }}
@@ -35,7 +35,7 @@ function Home() {
                 </div>
             </div>
             <Parallax
-                image={<img alt="" src="https://altentechnology.dk/static/base/gfx/alten.france.jpg"/>}
+                image={<img alt="" src="https://api.altentechnology.dk/static/base/gfx/alten.france.jpg"/>}
                 options={{
                     responsiveThreshold: 0
                 }}
@@ -53,7 +53,7 @@ function Home() {
                 </div>
             </div>
             <Parallax
-                image={<img alt="" src="https://altentechnology.dk/static/base/gfx/parallax4.jpg"/>}
+                image={<img alt="" src="https://api.altentechnology.dk/static/base/gfx/parallax4.jpg"/>}
                 options={{
                     responsiveThreshold: 0
                 }}

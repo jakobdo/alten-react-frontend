@@ -131,7 +131,7 @@ function App() {
                     </div>
                     <div className="center-align">
                         <a target="_blank" rel="noopener noreferrer" href="https://alten.com">
-                            <img className="responsive-img" alt="ALTEN Logo" src="https://altentechnology.dk/static/base/logo/alten.png" />
+                            <img className="responsive-img" alt="ALTEN Logo" src="https://api.altentechnology.dk/static/base/logo/alten.png" />
                         </a>
                     </div>
                     <div className="footer-copyright">
