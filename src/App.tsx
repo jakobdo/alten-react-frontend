@@ -47,8 +47,8 @@ function App() {
                     >   
                         <NavLink to="/consultants">CONSULTANTS</NavLink>
                         <NavLink to="/projects">PROJECTS</NavLink>
-                        <NavLink to="/technologies">TECHNOLOGIES & TOOLS</NavLink>
-                        <NavLink to="/about">ABOUT US</NavLink>
+                        <NavLink to="/technologies">TECH & TOOLS</NavLink>
+                        <NavLink to="/about">ABOUT</NavLink>
                         <Dropdown
                             id="Dropdown_6"
                             options={{
