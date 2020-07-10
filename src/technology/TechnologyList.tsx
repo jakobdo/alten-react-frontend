@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import API from '../utils/API';
-import { Row, Col } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import { ITechnology } from '../models/Technology';
 

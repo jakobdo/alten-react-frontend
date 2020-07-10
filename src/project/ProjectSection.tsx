@@ -2,8 +2,6 @@ import React from 'react';
 import { IProjectSimple } from '../models/Project';
 import { Icon, Card } from 'react-materialize';
 import { Link } from 'react-router-dom';
-import { ITechnologySimple } from '../models/Technology';
-import TechSeparator from '../common/TechSeparator';
 import TechnologyChipList from '../technology/TechnologyChipList';
 
 interface ProjectSectionProps {

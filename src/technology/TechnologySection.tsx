@@ -1,6 +1,5 @@
 import React from 'react';
-import { Icon, Card, Chip } from 'react-materialize';
-import { Link } from 'react-router-dom';
+import { Icon, Card } from 'react-materialize';
 import { ITechnologySimple } from '../models/Technology';
 import TechnologyChipList from './TechnologyChipList';
 
