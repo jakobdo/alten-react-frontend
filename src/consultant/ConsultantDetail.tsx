@@ -68,7 +68,7 @@ function ConsultantDetail(){
                                     href={consultant.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer">
-                                        <img src="http://localhost:8000/static/base/logo/linkedin.png" alt="LinkedIn" />
+                                        <img src="https://api.altentechnology.dk//static/base/logo/linkedin.png" alt="LinkedIn" />
                                 </a>
                             </div>
                         )}

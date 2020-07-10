@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { Card } from 'react-materialize';
 import { IService } from '../models/Service';
 import ProjectSection from '../project/ProjectSection';
+import TechnologySection from '../technology/TechnologySection';
 
 function ServiceDetail(){
     const { serviceSlug } = useParams();
@@ -28,6 +29,8 @@ function ServiceDetail(){
                     </Card>
 
                     <ProjectSection projects={service.projects} />
+
+                    <TechnologySection technologies={service.technologies} />
                 </React.Fragment>
             ) : (
                 <Loading />

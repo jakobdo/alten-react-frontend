@@ -36,11 +36,11 @@ function ConsultantList(){
             <h1>Consultants</h1>
             <div>
                 <Link to="/consultants">
-                    <Chip close={false}>All</Chip>
+                    <Chip>All</Chip>
                 </Link>
                 {tags.map((tag: ITag) => 
                     <Link key={tag.slug} to={`/consultants/tags/${tag.slug}`}>
-                        <Chip close={false}>{tag.name}</Chip>
+                        <Chip>{tag.name}</Chip>
                     </Link>
                 )}
             </div>

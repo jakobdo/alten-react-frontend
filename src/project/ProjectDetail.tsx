@@ -24,15 +24,17 @@ function ProjectDetail(){
     return (
         <div className="container">
             {project ? (
-                <React.Fragment>
+                <>
                     <h1>{project.name}</h1>
                     <Card>
                         <table className="highlight">
                             <tbody>
-                                <tr>
-                                    <th>Industry: </th>
-                                    <td>{project.industry}</td>
-                                </tr>
+                                {project.industry && (
+                                    <tr>
+                                        <th>Industry: </th>
+                                        <td>{project.industry.name}</td>
+                                    </tr>
+                                )}
                                 <tr>
                                     <th>Description: </th>
                                     <td>{project.description}</td>
@@ -49,16 +51,16 @@ function ProjectDetail(){
                         </table>
                     </Card>
                     {project.consultants.length > 0 && (
-                        <React.Fragment>
+                        <>
                             <h2>Consultants</h2>
                             <Row>
                                 {project.consultants.map((consultant: IConsultantSimple) => (
                                     <ConsultantLink key={consultant.slug} consultant={consultant} />
                                 ))}
                             </Row>
-                        </React.Fragment>
+                        </>
                     )}
-                </React.Fragment>
+                </>
             ) : (
                 <Loading />
             )}
