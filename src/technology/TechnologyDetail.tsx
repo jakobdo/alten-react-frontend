@@ -7,6 +7,7 @@ import Loading from '../common/Loading';
 import { ITechnology } from '../models/Technology';
 import ConsultantLink from '../common/ConsultantLink';
 import { IConsultantSimple } from '../models/Consultant';
+import ProjectSection from '../project/ProjectSection';
 
 function TechnologyDetail(){
     const { technologySlug } = useParams();
@@ -38,6 +39,8 @@ function TechnologyDetail(){
                             </Row>
                         </>
                     )}
+
+                    <ProjectSection projects={technology.projects} />
                 </>
             ) : (
                 <Loading />
