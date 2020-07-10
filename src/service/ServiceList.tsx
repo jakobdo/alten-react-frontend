@@ -23,13 +23,17 @@ function ServiceList(){
             <ul className="list">
                 {services.map((service: IServiceSimple) => 
                     <li className="list-item" key={service.slug}>
-                        <Link to={`/services/${service.slug}`}>
-                            <Card
-                                header={<CardTitle image={service.image.medium} />}
-                            >
+                        <Card
+                            header={(
+                                <Link to={`/services/${service.slug}`}>
+                                    <CardTitle image={service.image.medium} />
+                                </Link>
+                            )}
+                        >
+                            <Link to={`/services/${service.slug}`}>
                                 {service.name}
-                            </Card>
-                        </Link>
+                            </Link>
+                        </Card>
                     </li>
                 )}
             </ul>

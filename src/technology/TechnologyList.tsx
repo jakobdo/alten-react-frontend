@@ -19,10 +19,10 @@ function TechnologyList(){
     return (
         <div className="container">
             <h1>Technologies & Tools</h1>
-            <Row>
+            <ul className="list">
                 <div className="collection">
                     {technologies.map((technology: ITechnology) => 
-                        <Col s={12} m={6} l={4} xl={3} key={technology.slug}>
+                        <li className="list-item" key={technology.slug}>
                             <div className="card"
                             >
                                 <Link 
@@ -32,10 +32,10 @@ function TechnologyList(){
                                     {technology.name}
                                 </Link>
                             </div>
-                        </Col>
+                        </li>
                     )}
                 </div>
-            </Row>
+            </ul>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import { Icon, Card } from 'react-materialize';
 import { Link } from 'react-router-dom';
 import { ITechnologySimple } from '../models/Technology';
 import TechSeparator from '../common/TechSeparator';
+import TechnologyChipList from '../technology/TechnologyChipList';
 
 interface ProjectSectionProps {
     projects: IProjectSimple[]
@@ -22,16 +23,8 @@ function ProjectSection({projects}:ProjectSectionProps){
                         <h2 className="center-align">Projects</h2>
                         {projects.map((project: IProjectSimple) => (
                             <React.Fragment key={project.slug}>
-                                <Link to={`/projects/${project.slug}/`}>{project.name}</Link> : 
-                                <>
-                                    {project.technologies.map<React.ReactNode>((technology: ITechnologySimple, index: number) => (
-                                        <Link 
-                                            to={`/technologies/${technology.slug}/`}
-                                            key={`tech_key_${index}`}
-                                        >{technology.name}</Link>
-                                    )).reduce((prev, curr, index) => [prev, <TechSeparator key={`sep_key_${index}`} />, curr])}
-                                </>
-                                <br/>
+                                <Link to={`/projects/${project.slug}/`}><h5>{project.name}</h5></Link>
+                                <TechnologyChipList technologies={project.technologies} />
                             </React.Fragment>
                         ))}
                     </Card>
