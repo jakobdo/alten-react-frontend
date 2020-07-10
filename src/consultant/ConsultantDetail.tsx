@@ -3,15 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { IConsultant } from '../models/Consultant';
 import API from '../utils/API';
 import { Row, Col, Card, Icon } from 'react-materialize';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Loading from '../common/Loading';
 import TechnologyLevels from '../common/TechnologyLevels';
-import {IProjectSimple} from '../models/Project';
-import { ITechnologySimple } from '../models/Technology';
-import TechSeparator from '../common/TechSeparator';
 import { IExperience } from '../models/Experience';
 
 import './ConsultantDetail.css';
+import ProjectSection from '../project/ProjectSection';
 
 function ConsultantDetail(){
     const { consultantSlug } = useParams();
@@ -89,30 +87,7 @@ function ConsultantDetail(){
                         </React.Fragment>
                     )}
 
-                    {consultant.projects.length > 0 && (
-                        <React.Fragment>
-                            <div className="center-align">
-                                <Icon>group_work</Icon>
-                            </div>
-
-                            <Card>
-                                <h2 className="center-align">Projects</h2>
-                                {consultant.projects.map((project: IProjectSimple) => (
-                                    <React.Fragment key={project.slug}>
-                                        <Link to={`/projects/${project.slug}/`}>{project.name}</Link> : 
-                                        <React.Fragment>
-                                            {project.technologies.map<React.ReactNode>((technology: ITechnologySimple, index: number) => (
-                                                <Link 
-                                                    to={`/technologies/${technology.slug}/`}
-                                                    key={`tech_key_${index}`}
-                                                >{technology.name}</Link>
-                                            )).reduce((prev, curr, index) => [prev, <TechSeparator key={`sep_key_${index}`} />, curr])}
-                                        </React.Fragment>
-                                    </React.Fragment>
-                                ))}
-                            </Card>
-                        </React.Fragment>
-                    )}
+                    <ProjectSection projects={consultant.projects} />
 
                     {consultant.experience.length > 0 && (
                         <React.Fragment>

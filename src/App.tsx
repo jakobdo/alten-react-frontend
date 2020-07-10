@@ -24,6 +24,8 @@ import About from './about/About';
 import TechnologyList from './technology/TechnologyList';
 import TechnologyDetail from './technology/TechnologyDetail';
 import './App.css';
+import ServiceList from './service/ServiceList';
+import ServiceDetail from './service/ServiceDetail';
 
 function App() {
     return (
@@ -46,8 +48,7 @@ function App() {
                         }}
                     >   
                         <NavLink to="/consultants">CONSULTANTS</NavLink>
-                        <NavLink to="/projects">PROJECTS</NavLink>
-                        <NavLink to="/technologies">TECH & TOOLS</NavLink>
+                        <NavLink to="/services">SERVICES</NavLink>
                         <NavLink to="/about">ABOUT</NavLink>
                         <Dropdown
                             id="Dropdown_6"
@@ -94,6 +95,12 @@ function App() {
                         <Route path="/technologies/:technologySlug">
                             <TechnologyDetail />
                         </Route>
+                        <Route exact={true} path="/services">
+                            <ServiceList />
+                        </Route>
+                        <Route path="/services/:serviceSlug">
+                            <ServiceDetail />
+                        </Route>
                         <Route path="/about">
                             <About />
                         </Route>
@@ -123,8 +130,7 @@ function App() {
                             <Col s={12} l={3}>
                                 <h5>Pages</h5>
                                 <Link to="/consultants">CONSULTANTS</Link><br />
-                                <Link to="/projects">PROJECTS</Link><br />
-                                <Link to="/technologies">TECH & TOOLS</Link><br />
+                                <Link to="/services">SERVICES</Link><br />
                                 <Link to="/about">ABOUT</Link>
                             </Col>
                         </Row>
