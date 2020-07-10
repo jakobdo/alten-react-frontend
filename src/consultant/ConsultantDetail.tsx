@@ -28,7 +28,7 @@ function ConsultantDetail(){
     return (
         <div className="container">
             {consultant ? (
-                <React.Fragment>
+                <>
                     <Card className="card-main">
                         <div className="center-align">
                             <img className="circle responsive-img" src={consultant.image.medium} alt={consultant.fullname} />
@@ -75,7 +75,7 @@ function ConsultantDetail(){
                     </Card>
 
                     {consultant.technologyLevels.length > 0 && (
-                        <React.Fragment>
+                        <>
                             <div className="center-align">
                                 <Icon>star</Icon>
                             </div>
@@ -84,13 +84,13 @@ function ConsultantDetail(){
                                 <h2 className="center-align">Technologies & Tools</h2>
                                 <TechnologyLevels technologyLevels={consultant.technologyLevels} />
                             </Card>
-                        </React.Fragment>
+                        </>
                     )}
 
                     <ProjectSection projects={consultant.projects} />
 
                     {consultant.experience.length > 0 && (
-                        <React.Fragment>
+                        <>
                             <div className="center-align">
                                 <Icon>work</Icon>
                             </div>
@@ -118,9 +118,9 @@ function ConsultantDetail(){
                                     ))}
                                 </div>
                             </Card>
-                        </React.Fragment>
+                        </>
                     )}
-                </React.Fragment>
+                </>
             ) : (
                 <Loading />
             )}

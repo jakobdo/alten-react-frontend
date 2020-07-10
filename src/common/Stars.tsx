@@ -20,9 +20,9 @@ function Stars({level}:StarsProps){
     }
 
     return (
-        <React.Fragment>
+        <>
             {stars}
-        </React.Fragment>
+        </>
     )
 }
 

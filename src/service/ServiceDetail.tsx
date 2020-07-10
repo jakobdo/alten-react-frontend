@@ -23,7 +23,7 @@ function ServiceDetail(){
     return (
         <div className="container">
             {service ? (
-                <React.Fragment>
+                <>
                     <Card>
                         <h1>{service.name}</h1>
                     </Card>
@@ -31,7 +31,7 @@ function ServiceDetail(){
                     <ProjectSection projects={service.projects} />
 
                     <TechnologySection technologies={service.technologies} />
-                </React.Fragment>
+                </>
             ) : (
                 <Loading />
             )}

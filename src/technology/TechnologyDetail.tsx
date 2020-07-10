@@ -23,22 +23,22 @@ function TechnologyDetail(){
     return (
         <div className="container">
             {technology ? (
-                <React.Fragment>
+                <>
                     <h1>{technology.name}</h1>
                     <Card>
                         {technology.description}
                     </Card>
                     {technology.consultants.length > 0 && (
-                        <React.Fragment>
+                        <>
                             <h2>Consultants</h2>
                             <Row>
                                 {technology.consultants.map((consultant: IConsultantSimple) => (
                                     <ConsultantLink key={consultant.slug} consultant={consultant} />
                                 ))}
                             </Row>
-                        </React.Fragment>
+                        </>
                     )}
-                </React.Fragment>
+                </>
             ) : (
                 <Loading />
             )}
