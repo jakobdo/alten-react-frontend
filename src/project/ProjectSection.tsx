@@ -18,7 +18,7 @@ function ProjectSection({projects}:ProjectSectionProps){
                         <Icon>group_work</Icon>
                     </div>
             
-                    <Card>
+                    <Card className="card-main">
                         <h2 className="center-align">Projects</h2>
                         {projects.map((project: IProjectSimple) => (
                             <React.Fragment key={project.slug}>
@@ -31,6 +31,7 @@ function ProjectSection({projects}:ProjectSectionProps){
                                         >{technology.name}</Link>
                                     )).reduce((prev, curr, index) => [prev, <TechSeparator key={`sep_key_${index}`} />, curr])}
                                 </>
+                                <br/>
                             </React.Fragment>
                         ))}
                     </Card>
