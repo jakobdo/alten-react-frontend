@@ -63,10 +63,6 @@ p {
     margin-bottom: 0px;
 }
 
-.consultant-list {
-
-}
-
 .right-left-padding {
     padding-right: 5%;
     padding-left:  5%;
@@ -98,7 +94,6 @@ p {
 .material-icons.md-48 {
     font-size: 48px;
 }
-
 
 body {
     display: flex;
@@ -196,4 +191,14 @@ footer h5 {
 
 .list-content p {
     flex: 1 0 auto;
+}
+
+nav .brand-logo {
+    font-size: 1.3rem;
+}
+
+@media (min-width: 600px) {
+    nav .brand-logo {
+        font-size: 2.1rem;
+    }
 }
